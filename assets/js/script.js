@@ -12,6 +12,19 @@ userSubmit.addEventListener("click", function(event){
     var selectedCity = userInput.value;
     console.log(selectedCity)
     localStorage.setItem("City", selectedCity)
+
+    var queryUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + selectedCity + "&appid=" + weatherAPIKey
+
+
+fetch(queryUrl)
+.then(function (response) {
+    return response.json();
+    })
+    .then(function (data) {
+    console.log(data);
+    })
+
+
 });
 
 // var userInputValue = document.querySelector("#userInput").value
