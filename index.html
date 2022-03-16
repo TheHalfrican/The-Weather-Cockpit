@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+   
+    <title>My Weather Cockpit</title>
+   
+     </head>
+
+  <body>
+        <div class="container-fluid">
+        <h1>My Weather Cockpit</h1>
+
+        </div>
+        <div>
+            <form action="/contact" method="post">
+                <label for="cityName">Search for a City:</label><br>
+                <input type="text" id="cityName" name="cityName" value="Los Angeles"><br>
+                <input type="submit" value="Search">
+            </form>
+
+        </div>
+
+        <div id="weatherContainer">
+            <h2 class = "cityTitle"></h2>
+            <p class = "temp"></p>
+            <p class = "wind"></p>
+            <p class = "humidity"></p>
+            <p class = "uvIndex"></p>
+
+        </div>
+
+
+     <script src="assets/js/script.js"></script>
+    </body>
+</html>
