@@ -22,28 +22,13 @@ fetch(queryUrl)
     })
     .then(function (data) {
     console.log(data);
+    document.querySelector("#currentTemp").innerText = "Temp: " + Math.floor(((data.main.temp)-273)+32) + "°F"
+    document.querySelector("#cityTitle").innerText = data.name
+    document.querySelector("#humidity").innerText = "Humidity: " + data.main.humidity + "%"
+    document.querySelector("#windSpeed").innerText = "Wind Speed: " + (data.wind.speed * 2) + "mph"
+    document.querySelector("#uvIndex").innerText = "UV Index: " + (data.wind.speed * 2) + "mph"
     })
 
 
 });
 
-// var userInputValue = document.querySelector("#userInput").value
-// console.log(userInputValue)
-// var queryUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + userInputValue + "&appid=" + weatherAPIKey
-
-
-
-
-
-
-
-
-
-
-// fetch(queryUrl)
-// .then(function (response) {
-//     return response.json();
-//     })
-//     .then(function (data) {
-//     console.log(data);
-//     });
